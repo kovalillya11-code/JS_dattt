@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TIME TRACKER</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="header">
+    <h1><span>TIME</span> <em>TRACKER</em></h1>
+    <p class="subtitle">Плануй Відстежуй Публікуй все вчасно</p>
+  </header>
+
+  <section class="card clock-card">
+    <p class="label">година</p>
+    <div id="clock" class="clock">00:00:00</div>
+    <p id="today" class="today"></p>
+  </section>
+
+  <section class="card">
+    <h2>Нова публікація</h2>
+    <form id="postForm" novalidate>
+      <label for="postName">Назва допису</label>
+      <input id="postName" type="text" placeholder="Наприклад: Анонс нового проєкту" maxlength="120">
+
+      <label for="network">Соціальна мережа</label>
+      <select id="network">
+        <option value="YouTube">YouTube</option>
+        <option value="Facebook">Facebook</option>
+        <option value="Instagram">Instagram</option>
+        <option value="TikTok">TikTok</option>
+        <option value="Telegram">Telegram</option>
+        <option value="X (Twitter)">X (Twitter)</option>
+      </select>
+
+      <label for="postTime">Дата й час публікації</label>
+      <input id="postTime" type="datetime-local">
+
+      <button type="submit" class="primary">Додати до плану</button>
+      <p id="formMessage" class="message" role="status"></p>
+    </form>
+  </section>
+
+  <section class="card">
+    <div class="list-head">
+      <h2>Контент-план</h2>
+      <span id="count" class="count">0 дописів</span>
+    </div>
+    <ul id="postList" class="post-list"></ul>
+    <p id="emptyText" class="empty">Поки що немає публікацій</p>
+  </section>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

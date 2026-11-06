@@ -1,0 +1,253 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #000;
+  color-scheme: dark;
+  scrollbar-width: thin;
+  scrollbar-color: #0c6eaa #000;
+}
+
+body {
+  margin: 0;
+  padding: 24px 16px 48px;
+  font-family: Arial, sans-serif;
+  color: #e8eaed;
+  background: #000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0b5180;
+  border-radius: 6px;
+  border: 2px solid #000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0a466b;
+}
+
+.header {
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 40px;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+.header h1 em {
+  font-style: normal;
+  color: #0c6eaa;
+}
+
+.subtitle {
+  margin: 6px 0 0;
+  color: #9aa0a6;
+  font-size: 15px;
+}
+
+.card {
+  background: #202124;
+  border: 1px solid #3c4043;
+  border-radius: 8px;
+  padding: 22px;
+  width: 100%;
+  max-width: 520px;
+}
+
+.card h2 {
+  margin: 0 0 14px;
+  font-size: 20px;
+  color: #e8eaed;
+  font-weight: normal;
+}
+
+/* Годинник */
+.clock-card {
+  text-align: center;
+}
+
+.label {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #9aa0a6;
+}
+
+.clock {
+  font-size: 56px;
+  font-weight: bold;
+  color: #8ab4f8;
+  font-family: "Courier New", monospace;
+  margin: 8px 0;
+}
+
+.today {
+  margin: 0;
+  color: #9aa0a6;
+  font-size: 14px;
+}
+
+/* Форма  */
+form label {
+  display: block;
+  margin: 12px 0 6px;
+  font-size: 13px;
+  color: #9aa0a6;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #5f6368;
+  border-radius: 4px;
+  background: #303134;
+  color: #e8eaed;
+  font-size: 15px;
+  font-family: inherit;
+  color-scheme: dark;
+}
+
+form input:focus,
+form select:focus {
+  outline: none;
+  border-color: #8ab4f8;
+  box-shadow: 0 0 0 2px rgba(138, 180, 248, 0.25);
+}
+
+form input::placeholder {
+  color: #7d8288;
+}
+
+form select option {
+  background: #303134;
+  color: #e8eaed;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: 1px solid #0b5180;
+  color: #ffffff;
+  transition: transform 0.15s ease, background 0.3s ease;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+button.primary {
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #0b5180 0%, #053150 100%);
+  font-size: 16px;
+}
+
+button.primary:hover {
+  background: linear-gradient(135deg, #0c6eaa 0%, #0b5180 100%);
+}
+
+.message {
+  min-height: 1.2em;
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #9aa0a6;
+  text-align: center;
+}
+
+.message.error {
+  color: #f28b82;
+}
+
+/* Список публікацій */
+.list-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-head h2 {
+  margin: 0;
+}
+
+.count {
+  font-size: 13px;
+  color: #8ab4f8;
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.post {
+  border-left: 4px solid #0c6eaa;
+  background: #303134;
+  border-radius: 6px;
+  padding: 12px 14px;
+}
+
+.post h3 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  color: #e8eaed;
+}
+
+.post p {
+  margin: 2px 0;
+  font-size: 13px;
+  color: #9aa0a6;
+}
+
+.post .status {
+  margin-top: 6px;
+  font-weight: bold;
+  color: #8ab4f8;
+}
+
+.post .status.past {
+  color: #9aa0a6;
+}
+
+.delete-btn {
+  margin-top: 8px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #0b5180 0%, #053150 100%);
+  font-size: 13px;
+}
+
+.delete-btn:hover {
+  background: linear-gradient(135deg, #0c6eaa 0%, #0b5180 100%);
+}
+
+.empty {
+  text-align: center;
+  color: #9aa0a6;
+  font-size: 14px;
+  margin: 14px 0 0;
+}
